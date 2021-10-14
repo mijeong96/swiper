@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -8,5 +9,35 @@ ul, ol, li {
 
 a {
   text-decoration: none; }
+
+body > a {
+  margin-right: 20px; }
+
+#popup {
+  width: 500px;
+  background: lightblue;
+  padding: 40px;
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+  #popup .content {
+    width: 100%;
+    min-height: 150px; }
+  #popup::after {
+    content: '';
+    display: block;
+    clear: both; }
+  #popup .wrap {
+    float: left; }
+    #popup .wrap label {
+      font: bold 12px/1 "맑은 고딕";
+      color: #fff;
+      margin-left: 4px; }
+  #popup .close {
+    float: right;
+    font: 14px/1 'arial';
+    color: #fff; }
 
 /*# sourceMappingURL=style.css.map */
