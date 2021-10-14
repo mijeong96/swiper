@@ -3,8 +3,27 @@
 //isCookie가 -1이면 쿠키가 현재 없는 것임
 var isCookie = document.cookie.indexOf("popup=done");
 
+//처음 로딩시에 쿠키가 없으면 팝업을 보이고
+if(isCookie == -1){
+    $("#popup").show();
+    console.log("쿠키없음");
+}else{ //쿠키가 있으면 팝업을 숨김
+    $("#popup").hide();
+    console.log("쿠키있음");
+}
 
+//del버튼을 클릭하면 유효기간을 0으로해서 클릭 즉시 유효기간 만료로 쿠키제거
+$(".del").on("click",function(){
+    setCookie(0);
+    alert("쿠키삭제완료");
+});
 
+//view버튼 클릭하여 쿠키가 있는지 체크
+$(".view").on("click",function(){
+    console.log(document.cookie);
+});
+
+//팝업 닫기 버튼을 클릭했을 때
 $("#popup .close").on("click",function(e){
     e.preventDefault();
 
@@ -25,7 +44,7 @@ function setCookie(time){
 
     today.setDate(date + time);
 
-    var dudate = today.toGMTString();
+    var duedate = today.toGMTString();
 
     //쿠키 생성 코드
     document.cookie ="popup=done; expires="+duedate;
