@@ -4,4 +4,44 @@
 .wrap {
     width: 600px;
     height: 300px;
+    border: 1px solid #000;
+    margin: 100px auto;
+    position: relative;
+    overflow: hidden;
+
+    .swiper-wrapper {
+        width: 100%;
+        height: 100%;
+
+        .swiper-slide {
+            width: 100%;
+            height: 100%;
+        }
+
+        .box1 { background: lightblue;}
+        .box2 { background: orange;}
+        .box3 { background: pink;}    
+        .box4 { background: lightgreen;}
+        .box5 { background: violet;}   
+    }
+
+    .auto {
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+
+        li {
+            float: left;
+            margin-right: 20px;
+            cursor: pointer;
+            color: #fff;
+            text-align: center;
+            width: 80px;
+            height: 20px;
+            line-height: 20px;
+
+            &.btnStart { background: blue;}
+            &.btnStop { background: red;}
+        }
+    }
 }

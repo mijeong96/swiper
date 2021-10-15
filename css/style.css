@@ -11,6 +11,43 @@ a {
 
 .wrap {
   width: 600px;
-  height: 300px; }
+  height: 300px;
+  border: 1px solid #000;
+  margin: 100px auto;
+  position: relative;
+  overflow: hidden; }
+  .wrap .swiper-wrapper {
+    width: 100%;
+    height: 100%; }
+    .wrap .swiper-wrapper .swiper-slide {
+      width: 100%;
+      height: 100%; }
+    .wrap .swiper-wrapper .box1 {
+      background: lightblue; }
+    .wrap .swiper-wrapper .box2 {
+      background: orange; }
+    .wrap .swiper-wrapper .box3 {
+      background: pink; }
+    .wrap .swiper-wrapper .box4 {
+      background: lightgreen; }
+    .wrap .swiper-wrapper .box5 {
+      background: violet; }
+  .wrap .auto {
+    position: absolute;
+    bottom: 20px;
+    left: 20px; }
+    .wrap .auto li {
+      float: left;
+      margin-right: 20px;
+      cursor: pointer;
+      color: #fff;
+      text-align: center;
+      width: 80px;
+      height: 20px;
+      line-height: 20px; }
+      .wrap .auto li.btnStart {
+        background: blue; }
+      .wrap .auto li.btnStop {
+        background: red; }
 
 /*# sourceMappingURL=style.css.map */
