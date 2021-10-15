@@ -35,7 +35,8 @@ a {
   .wrap .auto {
     position: absolute;
     bottom: 20px;
-    left: 20px; }
+    left: 20px;
+    z-index: 10; }
     .wrap .auto li {
       float: left;
       margin-right: 20px;

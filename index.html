@@ -35,7 +35,47 @@
 <script>
     const swiper = new Swiper('.wrap', {
 
+//좌우버튼 옵션
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+//페이징버튼 옵션
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true
+  },
+
+  loop: true, //순환여부 결정
+  speed: 500, //슬라이딩 속도
+  direction: "horizontal", //슬라이딩 방향 vertical:세로
+  spaceBetween: 0, //사이간격 (숫자px)
+  slidePerView: 1, //하나의 화면당 보일 패널의 개수
+  grabCursor: true, //마우스 커서 모양 변경
+
+  autoplay: {
+    delay: 1000,
+    disableOnInteration: true
+    //false : 롤링중에 스와이프되더라도 계속 롤링
+    //true : 롤링중에 스와이프되면 롤링 중지
+}
 });
+
+var btnStart = document.querySelector(".btnStart");
+var btnStop = document.querySelector(".btnStop");
+
+swiper.autoplay.stop();
+
+btnStart.onclick = function(){
+    swiper.autoplay.start();
+}
+btnStop.onclick = function(){
+    swiper.autoplay.stop();
+}
+
+
+
 </script>
 </body>
 </html>
