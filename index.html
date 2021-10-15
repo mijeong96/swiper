@@ -61,7 +61,13 @@
     //true : 롤링중에 스와이프되면 롤링 중지
 },
 
-  effect: "fade"
+  effect: "cube",
+   cubeEffect: {
+     shadow: true,
+     slideShadow: true,
+     shadowOffset: 20,
+     shadowScale: 0.9
+   }
 });
 
 var btnStart = document.querySelector(".btnStart");
